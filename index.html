@@ -1,43 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books Information</title>
-</head>
-<body>
-    <h1>Books Details</h1>
-    <p id="firstBookTitle"></p>
-    <p id="secondBookAuthor"></p>
-    <ul id="bookGenres"></ul>
+<!DOCTYPE html> 
+<html> 
+<head> 
+   <title>jQuery DOM Operations</title> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>   
+   <style> 
+     .myStyle { 
+      background-color: coral; 
+      padding: 16px; 
+     } 
+   </style> 
+</head> 
+<body> 
+  <div id="myElement">Original Text</div> 
+ 
+  <div id="myDIV"> 
+    <p>I am a myDIV.</p> 
+  </div> 
+ 
+  <button id="myButton">Click me</button> 
 
-    <script>
-        // Sample JSON structure based on the instructions
-        const booksData = {
-            "Books": [
-                {
-                    "title": "The Great Gatsby",
-                    "author": "F. Scott Fitzgerald",
-                    "genres": ["Fiction", "Classics"]
-                },
-                {
-                    "title": "To Kill a Mockingbird",
-                    "author": "Harper Lee",
-                    "genres": ["Fiction", "Coming-of-age"]
-                }
-            ]
-        };
+  <script> 
+    // a: Modify the text content of the element with ID "myElement"
+    $("#myElement").text("Modified Text");
 
-        // (a) Display the title of the first book
-        console.log(booksData.Books[0].title);
+    // b: Add the class "myStyle" to the element with ID "myDIV"
+    $("#myDIV").addClass("myStyle");
 
-        // (b) Display the author of the second book
-        console.log(booksData.Books[1].author);
-
-        // (c) Display the genres of all books
-        booksData.Books.forEach(book => {
-            console.log(book.genres);
-        });
-    </script>
-</body>
+    // c: Add a click event listener to the button with ID "myButton"
+    $("#myButton").click(function() {
+        alert("Button clicked!");
+    });
+  </script> 
+</body> 
 </html>
