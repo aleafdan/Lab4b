@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Information</title>
+</head>
+<body>
+    <h1>Books Details</h1>
+    <p id="firstBookTitle"></p>
+    <p id="secondBookAuthor"></p>
+    <ul id="bookGenres"></ul>
+
+    <script>
+        // Sample JSON structure based on the instructions
+        const booksData = {
+            "Books": [
+                {
+                    "title": "The Great Gatsby",
+                    "author": "F. Scott Fitzgerald",
+                    "genres": ["Fiction", "Classics"]
+                },
+                {
+                    "title": "To Kill a Mockingbird",
+                    "author": "Harper Lee",
+                    "genres": ["Fiction", "Coming-of-age"]
+                }
+            ]
+        };
+
+        // (a) Display the title of the first book
+        console.log(booksData.Books[0].title);
+
+        // (b) Display the author of the second book
+        console.log(booksData.Books[1].author);
+
+        // (c) Display the genres of all books
+        booksData.Books.forEach(book => {
+            console.log(book.genres);
+        });
+    </script>
+</body>
+</html>
